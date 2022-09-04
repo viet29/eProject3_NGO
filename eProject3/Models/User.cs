@@ -20,7 +20,7 @@ namespace eProject3.Models
             this.Contacts = new HashSet<Contact>();
             this.Contributions = new HashSet<Contribution>();
         }
-    
+
         public int UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }

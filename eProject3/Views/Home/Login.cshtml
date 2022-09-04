@@ -1,0 +1,35 @@
+﻿@{ 
+    Layout = null;
+    ViewBag.Title = "Đăng nhập";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script>
+        function mess() {
+            @TempData["LoginResult"] = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="logForm form-group" style="justify-content: center; text-align: center; margin-top: 10%; align-items: center; width: 100%; align-content: center">
+        <h1 style="width: 100%">ĐĂNG NHẬP ADMIN</h1>
+        <br/>
+        <br/>
+        <div style="display: flex; justify-content: center">
+            <form action="LoginStart" method="post" style="width: 30%; left: 50%">
+                <input type="text" name="AdminName" class="form-control" placeholder="Tài khoản"/>
+                <br />
+                <input type="password" name="AdminPassword" class="form-control" placeholder="Mật khẩu"/>
+                <br />
+                <input type="submit" value="Đăng nhập" onclick="mess()" class="Logbtn btn btn-primary"/>
+                <p>@TempData["LoginResult"]</p>
+            </form>
+        </div>
+        
+    </div>
+</body>
